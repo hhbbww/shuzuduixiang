@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let str = 'https://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.com';
+		// arr.charAt();//用来返回指定位置的字符
+		// console.log(arr.__proto__)
+		// let str = arr.charAt(3);
+		// console.log(str)
+		// let index = str.indexOf('fa')
+		// console.log(index)
+		// let index1 = arr.lastIndexOf('ad')
+		// relaceALL(str,'cd')
+		function relaceALL(str,rStr){
+			let star ='*'.repeat(rStr.length);
+			let newarr=[];
+			while(str.includes(rStr)){
+				newarr[newarr.length]=str.indexOf(rStr);
+				str=str.replace(rStr,star)
+				
+			}
+			return newarr
+
+		}
+		let index3 = relaceALL(str,'baidu')
+		console.log(index3)
+		function arr(str,str1){
+			let num=[];
+			for(let i=0;i<str.length;i++){
+				if(str.slice(i,i+5)==str1){
+					num.push(i);
+				}
+			}
+			return num
+		}
+		let result=arr(str,'baidu');
+		console.log(result)
+	</script>
+</body>
+</html>
